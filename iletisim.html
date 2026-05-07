@@ -35,26 +35,26 @@
     </section>
 
     <section class="card-box p-4">
-        <form id="iletisimFormu">
+        <form id="iletisimFormu" action="iletisim.php" method="post">
 
             <div class="mb-3">
                 <label class="form-label">Ad Soyad</label>
-                <input type="text" id="adSoyad" class="form-control" placeholder="Adınızı ve soyadınızı giriniz">
+                <input type="text" id="adSoyad" name="adSoyad" class="form-control" placeholder="Adınızı ve soyadınızı giriniz">
             </div>
 
             <div class="mb-3">
                 <label class="form-label">E-posta</label>
-                <input type="text" id="email" class="form-control" placeholder="ornek@mail.com">
+                <input type="text" id="email" name="email" class="form-control" placeholder="ornek@mail.com">
             </div>
 
             <div class="mb-3">
                 <label class="form-label">Telefon</label>
-                <input type="text" id="telefon" class="form-control" placeholder="05xxxxxxxxx">
+                <input type="text" id="telefon" name="telefon" class="form-control" placeholder="05xxxxxxxxx">
             </div>
 
             <div class="mb-3">
                 <label class="form-label">Konu</label>
-                <select id="konu" class="form-select">
+                <select id="konu" name="konu" class="form-select">
                     <option value="">Konu seçiniz</option>
                     <option value="Öneri">Öneri</option>
                     <option value="Şikayet">Şikayet</option>
@@ -69,17 +69,18 @@
             </div>
 
             <div class="mb-3">
-                <input type="checkbox" id="onay">
+                <input type="checkbox" id="onay" name="onay" value="Onaylandı">
                 <label for="onay">Bilgilerimin gönderilmesini onaylıyorum.</label>
             </div>
 
             <div class="mb-3">
                 <label class="form-label">Mesaj</label>
-                <textarea id="mesaj" class="form-control" rows="4" placeholder="Mesajınızı yazınız"></textarea>
+                <textarea id="mesaj" name="mesaj" class="form-control" rows="4" placeholder="Mesajınızı yazınız"></textarea>
             </div>
 
             <button type="button" class="btn btn-dark" onclick="jsKontrol()">JavaScript ile Kontrol Et</button>
             <button type="button" class="btn btn-secondary" onclick="htmlKontrol()">HTML5 ile Kontrol Et</button>
+            <button type="submit" class="btn btn-success">PHP Sayfasına Gönder</button>
             <button type="reset" class="btn btn-outline-danger">Temizle</button>
 
         </form>
