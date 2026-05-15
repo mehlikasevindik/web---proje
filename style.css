@@ -107,3 +107,13 @@ h2 {
     font-size: 17px;
     line-height: 1.7;
 }
+
+.carousel-item img {
+    height: 500px;
+    object-fit: contain;
+}
+
+.card img {
+    height: 220px;
+    object-fit: cover;
+}
